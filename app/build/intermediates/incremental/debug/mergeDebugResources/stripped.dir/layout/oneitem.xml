@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/lytParent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+
+    android:orientation="vertical">
+
+    <CheckBox
+        android:id="@+id/chkName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="5dp"
+        android:buttonTint="@color/cardview_dark_background"
+        android:layout_centerVertical="true"
+        />
+
+    <TextView
+        android:id="@+id/txtName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:layout_toRightOf="@+id/chkName"
+        android:layout_toLeftOf="@+id/txtConsumableCount"
+        android:layout_centerVertical="true"
+
+        />
+    <EditText
+        android:id="@+id/txtConsumableCount"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="5dp"
+        android:visibility="gone"/>
+
+</RelativeLayout>
