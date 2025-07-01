@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.dropdownmvvm.app-mergeDebugResources-33:/values-small-v4/values-small-v4.xml",
+            "outputFile": "com.example.dropdownmvvm.app-mergeDebugResources-49:/values-small-v4/values-small-v4.xml",
             "map": [
                 {
                     "source": "C:\\Users\\Spero Andriod\\.gradle\\caches\\transforms-3\\fef639da47e1090a5283a557c8e94095\\transformed\\material-1.11.0\\res\\values-small-v4\\values-small-v4.xml",

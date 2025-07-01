@@ -2,5 +2,6 @@ package com.example.dropdownmvvm.model
 
 data class ServerModel(
     val id: Int,
-    val name: String
+    val name: String,
+    var isSelected: Boolean = false
 )

@@ -1,33 +1,45 @@
 package com.example.dropdownmvvm
 
+import android.view.LayoutInflater
+import android.view.View
 import android.view.ViewGroup
+import android.widget.CheckBox
 import android.widget.TextView
+import androidx.appcompat.view.menu.ActionMenuItemView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.dropdownmvvm.model.ServerModel
 
 class ItemAdapter(
-    private val itemList: List<ServerModel>,
-    private val onClick: (ServerModel) -> Unit
-) : RecyclerView.Adapter<ItemAdapter.ItemViewHolder>() {
+    val itemList: List<ServerModel>,
+    private val onItemClick: (ServerModel) -> Unit
+) : RecyclerView.Adapter<ItemAdapter.ViewHolder>() {
 
-    inner class ItemViewHolder(private val textView: TextView) : RecyclerView.ViewHolder(textView) {
-        fun bind(item: ServerModel) {
-            textView.text = item.name
-            textView.setOnClickListener { onClick(item) }
+    class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+        val textView: TextView = itemView.findViewById(R.id.txtName)
+        val checkBox: CheckBox = itemView.findViewById(R.id.chkName)
+
+    }
+
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
+        val view = LayoutInflater.from(parent.context)
+            .inflate(R.layout.oneitem, parent, false)
+        return ViewHolder(view)
+    }
+
+    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
+        val item = itemList[position]
+        holder.textView.text = item.name
+        holder.checkBox.isChecked = item.isSelected
+
+        holder.itemView.setOnClickListener {
+            onItemClick(item)
         }
-    }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ItemViewHolder {
-        val textView = TextView(parent.context).apply {
-            setPadding(20, 30, 20, 30)
-            textSize = 18f
+        holder.checkBox.setOnCheckedChangeListener { _, isChecked ->
+            item.isSelected = isChecked
         }
-        return ItemViewHolder(textView)
+
     }
 
-    override fun getItemCount() = itemList.size
-
-    override fun onBindViewHolder(holder: ItemViewHolder, position: Int) {
-        holder.bind(itemList[position])
-    }
+    override fun getItemCount(): Int = itemList.size
 }

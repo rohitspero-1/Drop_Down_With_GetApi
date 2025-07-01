@@ -4,6 +4,7 @@ package com.example.dropdownmvvm.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.LinearLayout;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -20,11 +21,15 @@ public final class BottomSheetListBinding implements ViewBinding {
   private final LinearLayout rootView;
 
   @NonNull
+  public final Button btnSubmit;
+
+  @NonNull
   public final RecyclerView recyclerViewItems;
 
-  private BottomSheetListBinding(@NonNull LinearLayout rootView,
+  private BottomSheetListBinding(@NonNull LinearLayout rootView, @NonNull Button btnSubmit,
       @NonNull RecyclerView recyclerViewItems) {
     this.rootView = rootView;
+    this.btnSubmit = btnSubmit;
     this.recyclerViewItems = recyclerViewItems;
   }
 
@@ -55,13 +60,19 @@ public final class BottomSheetListBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
+      id = R.id.btnSubmit;
+      Button btnSubmit = ViewBindings.findChildViewById(rootView, id);
+      if (btnSubmit == null) {
+        break missingId;
+      }
+
       id = R.id.recyclerViewItems;
       RecyclerView recyclerViewItems = ViewBindings.findChildViewById(rootView, id);
       if (recyclerViewItems == null) {
         break missingId;
       }
 
-      return new BottomSheetListBinding((LinearLayout) rootView, recyclerViewItems);
+      return new BottomSheetListBinding((LinearLayout) rootView, btnSubmit, recyclerViewItems);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

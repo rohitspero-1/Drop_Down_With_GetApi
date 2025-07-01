@@ -1,14 +1,18 @@
 [
     {
-        "merged": "C:\\Users\\Spero Andriod\\.gradle\\daemon\\8.4\\com.example.dropdownmvvm.app-mergeDebugResources-34:\\layout\\activity_main.xml",
-        "source": "C:\\Users\\Spero Andriod\\.gradle\\daemon\\8.4\\com.example.dropdownmvvm.app-main-37:\\layout\\activity_main.xml"
+        "merged": "com.example.dropdownmvvm.app-mergeDebugResources-50:/layout/bottom_sheet_list.xml",
+        "source": "com.example.dropdownmvvm.app-main-53:/layout/bottom_sheet_list.xml"
     },
     {
-        "merged": "com.example.dropdownmvvm.app-mergeDebugResources-34:/layout/oneitem.xml",
-        "source": "com.example.dropdownmvvm.app-main-37:/layout/oneitem.xml"
+        "merged": "C:\\Users\\Spero Andriod\\.gradle\\daemon\\8.4\\com.example.dropdownmvvm.app-mergeDebugResources-50:\\layout\\bottom_sheet_list.xml",
+        "source": "C:\\Users\\Spero Andriod\\.gradle\\daemon\\8.4\\com.example.dropdownmvvm.app-main-53:\\layout\\bottom_sheet_list.xml"
     },
     {
-        "merged": "C:\\Users\\Spero Andriod\\.gradle\\daemon\\8.4\\com.example.dropdownmvvm.app-mergeDebugResources-34:\\layout\\bottom_sheet_list.xml",
-        "source": "C:\\Users\\Spero Andriod\\.gradle\\daemon\\8.4\\com.example.dropdownmvvm.app-main-37:\\layout\\bottom_sheet_list.xml"
+        "merged": "C:\\Users\\Spero Andriod\\.gradle\\daemon\\8.4\\com.example.dropdownmvvm.app-mergeDebugResources-50:\\layout\\oneitem.xml",
+        "source": "C:\\Users\\Spero Andriod\\.gradle\\daemon\\8.4\\com.example.dropdownmvvm.app-main-53:\\layout\\oneitem.xml"
+    },
+    {
+        "merged": "C:\\Users\\Spero Andriod\\.gradle\\daemon\\8.4\\com.example.dropdownmvvm.app-mergeDebugResources-50:\\layout\\activity_main.xml",
+        "source": "C:\\Users\\Spero Andriod\\.gradle\\daemon\\8.4\\com.example.dropdownmvvm.app-main-53:\\layout\\activity_main.xml"
     }
 ]

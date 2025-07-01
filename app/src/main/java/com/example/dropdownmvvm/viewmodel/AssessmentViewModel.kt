@@ -12,6 +12,8 @@ class AssessmentViewModel : ViewModel() {
     val obsStateList = MutableLiveData<ApiResult<List<ServerModel>>>()
     private val repository = IncidentRepository()
 
+    val obsPostResult = MutableLiveData<ApiResult<Unit>>()
+
     fun getStateListFromApi() {
         obsStateList.postValue(ApiResult(loading = true))
         viewModelScope.launch {
@@ -19,4 +21,14 @@ class AssessmentViewModel : ViewModel() {
             obsStateList.postValue(result)
         }
     }
+
+    fun postSelectedStates(selected : List<ServerModel>){
+        obsPostResult.postValue(ApiResult(loading = true))
+        viewModelScope.launch {
+            val result = repository.postStateList(selected)
+            obsPostResult.postValue(result)
+        }
+    }
+
+
 }

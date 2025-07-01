@@ -1,6 +1,7 @@
 R_DEF: Internal format may change without notice
 local
 id btnSelectItem
+id btnSubmit
 id chkName
 id lytParent
 id recyclerViewItems
